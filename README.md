@@ -6,7 +6,9 @@
 [Bootstrap](https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css)
 [Animate.css](https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css)
 
-[images](https://www.pexels.com/)(https.//www.chatgpt.com)
+[Font](https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap)
+
+[images](https://www.pexels.com/)
 ![Green Leaf Vegetarian Logo](logo.png)
 ![Salad bowl hero image](hero-image-480x270.jpg)
 ![Salad Bowl](salad-card.jpg)
