@@ -3,13 +3,293 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mtm6201-final</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link href="css/main.css" rel="stylesheet">
+    <title>Menu - Green Leaf Vegetarian | Fresh Plant-Based Dining</title>
+    <meta name="description" content="Explore our fresh vegetarian menu featuring salads, sandwiches, and smoothies. All dishes made with locally sourced ingredients.">
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/b24d73bea6.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+    <!-- Skip to main content link for screen readers -->
+    <a href="#main-content" class="skip-link visually-hidden-focusable">Skip to main content</a>
+
+    <!-- Header -->
+    <header id="header" role="banner">
+        <nav class="navbar navbar-expand-md" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <a class="navbar-brand" href="index.html" aria-label="Green Leaf Vegetarian - Home">
+                    <img src="images/logo.png" alt="Green Leaf Vegetarian Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                    <span class="visually-hidden">Menu</span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-none d-md-flex align-items-center" role="complementary" aria-label="User actions">
+                    <a href="#" class="nav-icon-item me-4" aria-label="Access your account">
+                        <i class="fa-solid fa-user" aria-hidden="true"></i>
+                        <span class="nav-icon-label">Account</span>
+                    </a>
+                    <a href="#" class="nav-icon-item" aria-label="View your order">
+                        <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                        <span class="nav-icon-label">My order</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Offcanvas Menu (Mobile) -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="fa-solid fa-x"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-center">
+            <ul class="navbar-nav text-center flex-grow-1">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="menu.html">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main id="main-content" role="main">
+        <!-- Menu Section -->
+        <section id="menu-page" class="menu-page">
+            <div id="menu-page-container" class="container">
+                <h1 class="text-center section-title animate__animated animate__fadeInDown">View Our Menu</h1>
+
+                <!-- Salads / Bowls -->
+                <div id="salads-section" class="menu-section">
+                    <div class="menu-title-container">
+                        <h2 class="menu-section-title">Salad / Bowls</h2>
+                    </div>
+                    <div class="menu-content-wrapper">
+                        <div class="menu-image-column">
+                            <img src="./images/menu-salad.jpg" alt="Menu Salad Bowl">
+                        </div>
+                        <div class="menu-items-column">
+                            <div class="menu-item">
+                                <h5 class="menu-item-title">Quinoa & Kale Power Bowl (GF) — $16.50</h5>
+                                <li class="menu-item-description">Tri-color quinoa, massaged kale, roasted sweet potatoes, avocado slices, cherry tomatoes, pumpkin seeds, lemon-tahini dressing</li>
+                            </div>
+                            <div class="menu-item">
+                                <h5 class="menu-item-title">Warm Lentil & Beet Salad — $15.00</h5>
+                                <li class="menu-item-description">French green lentils, roasted beets, arugula, crumbled goat cheese (optional), candied walnuts, balsamic reduction</li>
+                            </div>
+                            <div class="menu-item">
+                                <h5 class="menu-item-title">Mediterranean Chickpea Salad (Vegan, GF) — $14.00</h5>
+                                <li class="menu-item-description">Chickpeas, cucumber, red onion, kalamata olives, cherry tomatoes, parsley, red wine vinaigrette</li>
+                            </div>
+                            <div class="menu-item">
+                                <h5 class="menu-item-title">Spinach & Strawberry Summer Salad (GF) — $13.50</h5>
+                                <li class="menu-item-description">Baby spinach, fresh strawberries, toasted almonds, feta crumbles, poppyseed dressing</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sandwiches -->
+                <div id="sandwiches-section" class="menu-section">
+                    <div class="menu-title-container">
+                        <h2 class="menu-section-title">Sandwiches</h2>
+                    </div>
+                    <div class="menu-content-wrapper">
+                        <div class="menu-image-column">
+                            <img src="./images/menu-sandwich.jpg" alt="Grilled Sandwich">
+                        </div>
+                        <div class="menu-items-column">
+                            <div class="menu-item">
+                                <h5 class="menu-item-title">Grilled Portobello & Pesto Panini — $14.50</h5>
+                                <li class="menu-item-description">Marinated portobello, house-made basil pesto, roasted red peppers, arugula, ciabatta</li>
+                            </div>
+                            <div class="menu-item">
+                                <h5 class="menu-item-title">Buffalo Cauliflower Wrap (Vegan) — $13.00</h5>
+                                <li class="menu-item-description">Crispy cauliflower tossed in buffalo sauce, vegan ranch, shredded lettuce, tomato, whole-wheat tortilla</li>
+                            </div>
+                            <div class="menu-item">
+                                <h5 class="menu-item-title">BBQ Jackfruit Slider Trio (Vegan) — $12.50</h5>
+                                <li class="menu-item-description">Pulled jackfruit with house BBQ sauce, pickled red onions, coleslaw, mini brioche buns</li>
+                            </div>
+                            <div class="menu-item">
+                                <h5 class="menu-item-title">Caprese Mozzarella Sandwich — $13.75</h5>
+                                <li class="menu-item-description">Fresh mozzarella, heirloom tomato, basil leaves, balsamic glaze, olive oil, sourdough</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Smoothies -->
+                <div id="smoothies-section" class="menu-section">
+                    <div class="menu-title-container">
+                        <h2 class="menu-section-title">Smoothies</h2>
+                    </div>
+                    <div class="menu-content-wrapper">
+                        <div class="menu-image-column">
+                            <img src="./images/menu-smoothie.jpg" alt="Menu Smoothies">
+                        </div>
+                        <div class="menu-items-column">
+                            <div class="menu-item">
+                                <h5 class="menu-item-title">Green Goddess Smoothie (Vegan, GF) — $8.50</h5>
+                                <li class="menu-item-description">Spinach, kale, green apple, banana, chia seeds, almond milk</li>
+                            </div>
+                            <div class="menu-item">
+                                <h5 class="menu-item-title">Berry Blast Smoothie (Vegan, GF) — $8.00</h5>
+                                <li class="menu-item-description">Mixed berries, banana, flaxseed, coconut water</li>
+                            </div>
+                            <div class="menu-item">
+                                <h5 class="menu-item-title">Tropical Sunshine Juice (Vegan, GF) — $7.50</h5>
+                                <li class="menu-item-description">Pineapple, mango, orange, carrot, ginger</li>
+                            </div>
+                            <div class="menu-item">
+                                <h5 class="menu-item-title">Protein Power Smoothie — $9.50</h5>
+                                <li class="menu-item-description">Pea protein, banana, peanut butter, oats, soy milk</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chef Recommended -->
+                <div id="chef-recommended-menu" class="row align-items-start g-5">
+                    <div class="col-lg-6 order-1 order-lg-1">
+                        <img src="./images/chef-recommended.jpg" class="chef-recommended-img" alt="Quinoa & Kale Power Bowl">
+                    </div>
+                    <div class="col-lg-6 order-2 order-lg-2">
+                        <div class="chef-content-wrapper">
+                            <h2 class="mb-3">Chef Recommended</h2>
+                            <h3 class="mb-4">Quinoa & Kale Power Bowl</h3>
+                            <p>A nutrient-packed bowl of goodness featuring organic quinoa, fresh kale, cherry tomatoes, cucumber, and a zesty lemon-tahini dressing. Perfect for a light yet satisfying meal.</p>
+                            <a href="#" class="btn btn-secondary mt-3">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nutritions / Allergens -->
+                <div id="nutrition-allergens" class="nutrition-allergens-section">
+                    <h3 class="nutrition-title">Nutritions / Allergens</h3>
+                    <div class="nutrition-content">
+                        <div class="nutrition-column">
+                            <h4 class="nutrition-subtitle">Nutrition Facts (per serving, approximate):</h4>
+                            <ul class="nutrition-list">
+                                <li>Calories: 350 – 650 kcal</li>
+                                <li>Total Fat: 12 – 30 g</li>
+                                <li>Saturated Fat: 2 – 8 g</li>
+                                <li>Carbohydrates: 40 – 80 g</li>
+                                <li>Dietary Fiber: 8 – 15 g</li>
+                                <li>Sugars: 5 – 20 g</li>
+                                <li>Protein: 10 – 25 g</li>
+                                <li>Sodium: 400 – 900 mg</li>
+                                <li>Vitamin A: 20 – 60 % DV</li>
+                                <li>Vitamin C: 30 – 80 % DV</li>
+                                <li>Calcium: 10 – 25 % DV</li>
+                                <li>Iron: 15 – 35 % DV</li>
+                            </ul>
+                        </div>
+                        <div class="allergens-column">
+                            <h4 class="allergens-subtitle">Common Allergens & Dietary Notes:</h4>
+                            <ul class="allergens-list">
+                                <li><strong>Gluten:</strong> present in breads, pastas, soy sauce</li>
+                                <li><strong>Tree Nuts:</strong> cashews (in sauces), almonds (salad toppings)</li>
+                                <li><strong>Peanuts:</strong> peanut-based dressings or sauces</li>
+                                <li><strong>Soy:</strong> tofu, tempeh, miso, soy milk</li>
+                                <li><strong>Dairy:</strong> butter, cream (in stroganoff), cheese (optional add-ons)</li>
+                                <li><strong>Sesame:</strong> tahini, sesame oil, seeds</li>
+                                <li><strong>Mustard:</strong> mustard-based dressings, sauces</li>
+                                <li><strong>Sulphites:</strong> dried fruits in bowls or salads</li>
+                                <li><strong>Nightshades:</strong> tomatoes, peppers, eggplant</li>
+                            </ul>
+                            <p class="dietary-note">All dishes clearly note vegan vs. vegetarian; gluten-free options are marked "GF."</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div id="footer-container" class="container">
+            <!-- Logo Section -->
+            <div id="footer-logo-section" class="row justify-content-center mb-4">
+                <div class="col-auto">
+                    <a class="footer-logo" href="index.html">
+                        <img src="images/logo.png" alt="Green Leaf Logo">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navigation Section -->
+            <div id="footer-nav-section" class="row justify-content-center mb-4">
+                <div class="col-auto">
+                    <ul class="nav">
+                        <li class="nav-item mx-3"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item mx-3"><a href="menu.html" class="nav-link">Menu</a></li>
+                        <li class="nav-item mx-3"><a href="services.html" class="nav-link">Services</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Schedule Section -->
+            <div id="footer-schedule-section" class="row justify-content-center mb-4">
+                <div class="col-auto">
+                    <p class="schedule-text">SUNDAY - THURSDAY: 11:30AM - 11PM | FRIDAY & SATURDAY: 11:30AM - 12AM</p>
+                </div>
+            </div>
+
+            <!-- Buttons Section -->
+            <div id="footer-buttons-section" class="row justify-content-center mb-4">
+                <div class="col-auto">
+                    <div id="footer-buttons" class="footer-buttons">
+                        <a href="services.html" class="btn btn-reserve">Reserve Now</a>
+                        <a href="menu.html" class="btn btn-order">Order Food</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Icons Section -->
+            <div id="footer-social-section" class="row justify-content-center mb-4">
+                <div class="col-auto">
+                    <div id="social-icons" class="social-icons">
+                        <a href="https://facebook.com" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://instagram.com" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright Section -->
+            <div id="footer-copyright-section" class="row justify-content-center">
+                <div class="col-auto">
+                    <p class="copyright-text">&copy; Copyright 2025 Green Leaf Vegetarian</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

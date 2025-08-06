@@ -1,0 +1,967 @@
+
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+/* Root Variables */
+:root {
+  --gl-bg-main: #F1EED8;
+  --gl-bg-nav: #1A402A;
+  --gl-accent: #57745D;
+  --gl-text-light: #F1EED8;
+  --gl-text-dark: #594E47;
+  --gl-font-family: 'Merriweather Sans', sans-serif;
+  --gl-button-border-radius: 15px;
+  
+  /* Typography clamp for fluid scaling */
+  --gl-h1-size: clamp(2.5rem, 4vw, 3.5rem);
+  --gl-h2-size: clamp(1.25rem, 2vw, 2rem);
+  --gl-h3-size: clamp(1.125rem, 1.5vw, 1.5rem);
+  --gl-h4-size: clamp(1rem, 1.3vw, 1.25rem);
+  --gl-p-size: clamp(1rem, 1.2vw, 1.2rem);
+  --gl-btn-size: clamp(1rem, 1.2vw, 1.3rem);
+}
+
+/* -- GENERAL BODY & TYPOGRAPHY -- */
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--gl-bg-main);
+    color: var(--gl-text-dark);
+    font-family: var(--gl-font-family);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, 
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: var(--gl-font-family);
+    font-weight: 800;
+}
+
+h1, .h1 { font-size: var(--gl-h1-size); }
+h2, .h2 { font-size: var(--gl-h2-size); }
+h3, .h3 { font-size: var(--gl-h3-size); }
+h4, .h4 { font-size: var(--gl-h4-size); }
+
+p {
+    font-size: var(--gl-p-size);
+    line-height: 1.8;
+}
+
+/* -- GLOBAL STYLES (Shared across all pages) -- */
+
+/* Accessibility - Skip Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--gl-bg-nav);
+    color: var(--gl-text-light);
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Buttons */
+.btn {
+    border-radius: var(--gl-button-border-radius);
+    padding: 0.75rem 1.5rem;
+    font-size: var(--gl-btn-size);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--gl-accent);
+    border-color: var(--gl-accent);
+    color: var(--gl-text-light);
+}
+
+.btn-primary:hover {
+     background-color: #4a6550;
+    border-color: #4a6550;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border-color: var(--gl-accent);
+    color: var(--gl-accent);
+}
+
+.btn-secondary:hover {
+    background-color: var(--gl-accent);
+    color: var(--gl-text-light);
+}
+
+.btn-light-outline {
+    background-color: transparent;
+    border: 2px solid var(--gl-text-light);
+    color: var(--gl-text-light);
+}
+
+.btn-light-outline:hover {
+    background-color: var(--gl-text-light);
+    color: var(--gl-bg-nav);
+}
+
+/* Section Styling */
+.section-spacing {
+    padding: 3rem 0;
+  }
+  
+.menu-section,
+.chef-section,
+.team-section,
+.reservation-section,
+.contact-section {
+    padding: 3rem 0;
+}
+
+/* Remove spacing between consecutive sections */
+.menu-section + .chef-section,
+.chef-section + .team-section,
+.menu-page + .reservation-section,
+.reservation-section + .contact-section {
+    padding-top: 0;
+}
+
+/* Menu page specific padding */
+.menu-page {
+    padding: 10rem 0 3rem 0;
+}
+
+.menu-page .section-title {
+    margin-bottom: 0;
+}
+
+#menu-page-container {
+    padding-top: 4rem;
+}
+
+/* -- HEADER & NAVIGATION (Shared all across pages) -- */
+
+.navbar {
+    background-color: var(--gl-bg-nav);
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand img {
+    max-height: 102px;
+}
+
+.navbar-brand .brand-text {
+    color: var(--gl-text-light);
+    font-size: var(--gl-p-size);
+    display: block;
+    margin-top: -5px;
+}
+
+.navbar .nav-link {
+    color: var(--gl-text-light);
+    font-weight: 500;
+    font-size: var(--gl-h3-size);
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--gl-text-light);
+    border-bottom-color: var(--gl-text-light);
+}
+
+/* Navigation Icons with Labels */
+.nav-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--gl-text-light);
+    transition: opacity 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.nav-icon-item:first-child {
+    margin-right: 0.75rem;
+}
+
+.nav-icon-item:last-child {
+    margin-left: 0.75rem;
+}
+
+.nav-icon-item:hover {
+    color: var(--gl-text-light);
+    opacity: 0.8;
+}
+
+.nav-icon-item i {
+    font-size: var(--gl-h3-size);
+    margin-bottom: 0;
+}
+
+.nav-icon-label {
+    font-size: clamp(0.75rem, 1vw, 0.9rem);
+    color: var(--gl-text-light);
+    text-align: center;
+}
+
+.navbar-toggler {
+    border: none;
+    color: var(--gl-text-light);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Font Awesome icons */
+.navbar-toggler i {
+    font-size: 1.5rem;
+    color: var(--gl-text-light);
+}
+
+/* Offcanvas Menu (Hamburger) */
+.offcanvas {
+    background-color: var(--gl-bg-nav);
+    color: var(--gl-text-light);
+}
+
+
+.offcanvas-body .nav {
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.offcanvas-body .nav-link {
+    color: var(--gl-text-light);
+    font-size: var(--gl-h3-size);
+    margin: 1rem 0;
+    padding: 0.75rem 0;
+}
+
+
+/* -- HOME PAGE STYLES -- */
+
+/* Hero Section */
+#hero {
+    position: relative;
+    background-color: #999;
+}
+
+#hero .d-flex {
+    height: 80vh;
+}
+
+/* Hero banner */
+#hero picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#hero picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hero Overlay */
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    z-index: 2;
+}
+
+/* Hero Content */
+#hero .text-center {
+    position: relative;
+    z-index: 3;
+}
+
+#hero h1,
+.hero-section h1 {
+    color: var(--gl-text-light);
+    font-size: var(--gl-h1-size);
+    font-weight: 800;
+}
+
+#hero p,
+.hero-section p {
+    color: var(--gl-text-light);
+    font-size: var(--gl-h2-size);
+}
+
+/* Hero Section Buttons - Mobile First */
+#hero .btn {
+    margin: 0.5rem;
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--gl-accent);
+    border-color: var(--gl-accent);
+    color: var(--gl-text-light);
+    border-width: 2px;
+}
+
+#hero .btn:hover {
+    background-color: #4a6550;
+    border-color: #4a6550;
+    color: var(--gl-text-light);
+}
+
+
+/* Remove spacing between consecutive sections */
+.menu-section + .chef-section,
+.chef-section + .team-section,
+.menu-page + .reservation-section,
+.reservation-section + .contact-section {
+    padding-top: 0;
+}
+
+.section-bg-accent {
+    background-color: var(--gl-accent);
+    color: var(--gl-text-light);
+    padding: 4rem 0;
+}
+
+.section-bg-accent h2, 
+.section-bg-accent p {
+    color: var(--gl-text-light);
+}
+
+.section-title {
+    margin-bottom: 4rem;
+}
+
+/* Menu Cards (Home Page) */
+.menu-card {
+    position: relative;
+    height: 475px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    animation: pulse 0.6s ease-in-out;
+}
+
+.menu-card-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.menu-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 312px;
+    background: linear-gradient(
+        to bottom,
+        rgba(26, 64, 42, 0) 0%,
+        rgba(13, 32, 21, 0.4) 46%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    z-index: 1;
+}
+
+.menu-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    color: white;
+    z-index: 2;
+    text-align: center;
+}
+
+.menu-card-content h6 {
+    font-size: var(--gl-h4-size);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.menu-card-content p {
+    font-size: var(--gl-p-size);
+    line-height: 1.6;
+    margin-bottom: 0;
+    color: white;
+    opacity: 0.9;
+}
+
+/* Team Section Cards (Home Page) */
+.card {
+    border: none;
+    background-color: transparent;
+    border-radius: 0; 
+}
+
+/* Card Images */
+.card-img-top {
+    height: 500px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Chef Recommended Section (Home Page) */
+.chef-recommended-img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.chef-section .col-lg-6 {
+    margin-top: 1rem;
+}
+
+/* Chef Content Wrapper */
+.chef-content-wrapper {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Our Story Section (Home Page) */
+.story-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Our Story Image (Home Page) */
+.story-img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+/* Team Section (Home Page) */
+.team-member img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Coordinator Image */
+.team-member img[alt="Team member Alex Thompson"] {
+    object-position: center 20%;
+}
+
+/* Executive Chef Image */
+.team-member img[alt="Team member Priya Gupta"] {
+    object-position: 40% 20%;
+}
+
+/* Chef Recommended Button */
+.chef-content-wrapper .btn {
+    width: 50%;
+    background-color: #BFA27E;
+    border-color: #BFA27E;
+    color: var(--gl-text-light);
+}
+
+.chef-content-wrapper .btn:hover {
+    background-color: #a8906e;
+    border-color: #a8906e;
+}
+
+/* -- MENU PAGE STYLES -- */
+
+/* Menu Page */
+.menu-title-container {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.menu-section-title {
+    color: var(--gl-text-dark);
+    font-size: var(--gl-h2-size);
+    font-weight: 600;
+    margin: 0;
+}
+
+.menu-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.menu-items-column {
+    flex: 1;
+}
+
+.menu-image-column {
+    width: 100%;
+    height: 413px;
+    overflow: hidden;
+}
+
+.menu-image-column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.menu-item {
+    margin-bottom: 2rem;
+}
+
+.menu-item:last-child {
+    margin-bottom: 0;
+}
+
+.menu-item-title {
+    color: var(--gl-text-dark);
+    font-size: var(--gl-h3-size);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.menu-item-description {
+    color: var(--gl-text-dark);
+    font-size: var(--gl-p-size);
+    line-height: 1.5;
+    margin: 0;
+    opacity: 0.8;
+}
+
+#chef-recommended-menu {
+    margin-bottom: 4rem;
+}
+
+/* Desktop Layout */
+.menu-item .price {
+    color: var(--gl-accent);
+    font-weight: 700;
+}
+
+/* -- SERVICES PAGE STYLES -- */
+
+/* Contact Us Map */
+.contact-section iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+/* Reservation Image */
+.img-fluid-rounded {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+/* Nutrition & Allergens Section (Menu Page) */
+.nutrition-allergens-section {
+    border: 1px solid #000;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+.nutrition-title {
+    text-align: center;
+    color: var(--gl-text-dark);
+    font-size: var(--gl-h2-size);
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.nutrition-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.nutrition-column,
+.allergens-column {
+    flex: 1;
+}
+
+.nutrition-subtitle,
+.allergens-subtitle {
+    color: var(--gl-text-dark);
+    font-size: var(--gl-h3-size);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.nutrition-list,
+.allergens-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nutrition-list li,
+.allergens-list li {
+    color: var(--gl-text-dark);
+    font-size: var(--gl-p-size);
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.dietary-note {
+    color: var(--gl-text-dark);
+    font-size: var(--gl-p-size);
+    line-height: 1.5;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* -- SHARED COMPONENTS -- */
+
+/* Forms */
+.form-control {
+    background-color: #E9E5D1;
+    border: 1px solid #DCD8C8;
+    border-radius: var(--gl-button-border-radius);
+    padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+    background-color: #E9E5D1;
+    border-color: var(--gl-accent);
+    box-shadow: 0 0 0 0.25rem rgba(87, 116, 93, 0.25);
+}
+
+/* Footer (Shared across all pages) */
+.footer {
+    background-color: #57745D;
+    color: var(--gl-text-light);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.footer .footer-logo img {
+    max-height: 144px;
+    width: auto;
+}
+
+.footer .nav-link {
+    color: var(--gl-text-light);
+    font-size: var(--gl-p-size);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+.footer .nav-link:hover {
+    color: var(--gl-text-light);
+    opacity: 0.8;
+}
+
+.schedule-text {
+    color: var(--gl-text-light);
+    font-size: var(--gl-p-size);
+    margin: 0;
+    text-align: center;
+}
+
+.footer-buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-reserve, 
+.btn-order {
+    background-color: #1A402A;
+    border-color: #1A402A;
+    color: var(--gl-text-light);
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.btn-reserve:hover, 
+.btn-order:hover {
+    background-color: #0f2a1a;
+    border-color: #0f2a1a;
+    color: var(--gl-text-light);
+}
+
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer .social-icon {
+    color: var(--gl-text-light);
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icon:hover {
+    color: #d3cfbf;
+}
+
+.copyright-text {
+    color: var(--gl-text-light);
+    font-size: var(--gl-p-size);
+    margin: 0;
+    text-align: center;
+}
+
+/* -- RESPONSIVE BREAKPOINTS -- */
+
+/* TABLET BREAKPOINT (min-width: 768px) */
+@media (min-width: 768px) {
+    /* Section Spacing */
+    .section-spacing {
+        padding: 6rem 0;
+    }
+    
+    .menu-section,
+    .chef-section,
+    .team-section,
+    .menu-page,
+    .reservation-section,
+    .contact-section {
+        padding: 5rem 0;
+    }
+    
+    /* Hero Section */
+    #hero .btn {
+        display: inline-block;
+        width: auto;
+        margin: 0 0.5rem;
+    }
+    
+    /* Section Background */
+    .section-bg-accent {
+        padding: 6rem 0;
+    }
+    
+    /* Menu Cards */
+    .menu-card {
+        height: 380px;
+    }
+    
+    .menu-card-overlay {
+        height: 180px;
+    }
+    
+    /* Menu Card Content - Smaller fonts for tablet */
+    .menu-card-content h6 {
+        font-size: clamp(1rem, 1.2vw, 1.1rem);
+        margin-bottom: 0.5rem;
+    }
+    
+    .menu-card-content p {
+        font-size: clamp(0.8rem, 1vw, 0.9rem);
+        line-height: 1.4;
+    }
+    
+    /* Chef Content Wrapper */
+    .chef-content-wrapper {
+        padding-right: 2rem;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    /* Team Member Images */
+    .team-member img {
+        height: 400px;
+    }
+    
+    /* Menu Section */
+    .menu-section {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .menu-title-container {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .menu-section-title {
+        font-size: var(--gl-h2-size);
+        font-weight: 700;
+    }
+    
+    .menu-content-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+        align-items: flex-start;
+    }
+    
+    .menu-items-column {
+        flex: 1;
+        order: 1;
+    }
+    
+    .menu-image-column {
+        flex: 1;
+        height: 773px;
+        order: 2;
+    }
+    
+    /* Menu Section */
+    .menu-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Sandwich section */
+    .menu-section:nth-of-type(2) .menu-content-wrapper {
+        flex-direction: row;
+    }
+    
+    .menu-section:nth-of-type(2) .menu-items-column {
+        order: 2;
+    }
+    
+    .menu-section:nth-of-type(2) .menu-image-column {
+        order: 1;
+    }
+    
+    /* Chef Recommended Section */
+    .menu-item-title {
+        font-size: var(--gl-h3-size);
+    }
+    
+    .menu-item-description {
+        font-size: var(--gl-p-size);
+    }
+    
+    /* Contact and Reservation Images */
+    .contact-section iframe {
+        height: 600px;
+    }
+    
+    .img-fluid-rounded {
+        height: 620px;
+    }
+    
+    /* Nutrition & Allergens */
+    .nutrition-content {
+        flex-direction: row;
+        gap: 3rem;
+    }
+    
+    .nutrition-title {
+        font-size: var(--gl-h2-size);
+        margin-bottom: 2.5rem;
+    }
+    
+    .nutrition-subtitle,
+    .allergens-subtitle {
+        font-size: var(--gl-h3-size);
+    }
+    
+    .nutrition-list li,
+    .allergens-list li {
+        font-size: var(--gl-p-size);
+    }
+    
+    .dietary-note {
+        font-size: var(--gl-p-size);
+    }
+}
+
+/* DESKTOP BREAKPOINT */
+@media (min-width: 1200px) {
+    /* Menu Cards - desktop */
+    .menu-card {
+        height: 580px;
+    }
+    
+    .menu-card-overlay {
+        height: 380px;
+    }
+    
+    /* Menu Card Content */
+    .menu-card-content h6 {
+        font-size: var(--gl-h3-size);
+        margin-bottom: 1rem;
+    }
+    
+    .menu-card-content p {
+        font-size: var(--gl-p-size);
+        line-height: 1.6;
+    }
+    
+    .menu-section-title {
+        font-size: var(--gl-h1-size);
+    }
+    
+    /* Our Story Image */
+    .story-img {
+        height: 700px;
+    }
+    
+    .section-spacing {
+        padding: 8rem 0;
+    }
+}
+
+/* Menu Card Hover Animation */
+@keyframes pulse {
+    0% {
+        transform: translateY(-5px) scale(1);
+    }
+    50% {
+        transform: translateY(-5px) scale(1.02);
+    }
+    100% {
+        transform: translateY(-5px) scale(1);
+    }
+}
