@@ -12,7 +12,7 @@
 
 [generated_images](https://chatgpt.com/)
 
-![Green Leaf Vegetarian Logo](logo.png)
+![Green Leaf Vegetarian Logo](images/logo.png)
 
 ![Salad bowl hero image](hero-image-480x270.jpg)
 
