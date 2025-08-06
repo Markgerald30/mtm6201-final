@@ -14,30 +14,30 @@
 
 ![Green Leaf Vegetarian Logo](images/logo.png)
 
-![Salad bowl hero image](hero-image-480x270.jpg)
+![Salad bowl hero image](hero-images/hero-image.jpg)
 
-![Salad Bowl](salad-card.jpg)
+![Salad Bowl](images/salad-card.jpg)
 
-![Avocado Toast](sandwich-card.jpg)
+![Avocado Toast](images/sandwich-card.jpg)
 
-![Smoothies](smoothie-card.jpg)
+![Smoothies](images/smoothie-card.jpg)
 
-![Quinoa & Kale Power Bowl](chef-recommended.jpg)
+![Quinoa & Kale Power Bowl](images/chef-recommended.jpg)
 
-![Our team in the kitchen](our-story.jpg)
+![Our team in the kitchen](images/our-story.jpg)
 
-![Team member Maya Sinclair](head-chef.jpg)
+![Team member Maya Sinclair](images/head-chef.jpg)
 
-![Team member Javier Martinez](general-manager.jpg)
+![Team member Javier Martinez](images/general-manager.jpg)
 
-![Team member Priya Gupta](executive-chef.jpg)
+![Team member Priya Gupta](images/executive-chef.jpg)
 
-![Team member Alex Thompson](coordinator.jpg)
+![Team member Alex Thompson](images/coordinator.jpg)
 
-![Menu Salad Bowl](menu-salad.jpg)
+![Menu Salad Bowl](images/menu-salad.jpg)
 
-![Grilled Sandwich](menu-sandwich.jpg)
+![Grilled Sandwich](images/menu-sandwich.jpg)
 
-![Menu Smoothies](menu-smoothie.jpg)
+![Menu Smoothies](images/menu-smoothie.jpg)
 
-![Restaurant Interior](reservation.jpg)
+![Restaurant Interior](images/reservation.jpg)
