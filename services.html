@@ -22,8 +22,8 @@
     <a href="#main-content" class="skip-link visually-hidden-focusable">Skip to main content</a>
 
     <!-- Header -->
-    <header id="header" role="banner">
-        <nav class="navbar navbar-expand-md" role="navigation" aria-label="Main navigation">
+    <header id="header">
+        <nav class="navbar navbar-expand-md" aria-label="Main navigation">
             <div class="container">
                 <a class="navbar-brand" href="index.html" aria-label="Green Leaf Vegetarian - Home">
                     <img src="images/logo.png" alt="Green Leaf Vegetarian Logo">
@@ -74,7 +74,7 @@
         </div>
     </div>
 
-    <main id="main-content" role="main">
+    <main id="main-content">
         <!-- Reservation Section -->
         <section id="reservation" class="reservation-section" style="padding-top: 8rem;">
             <div id="reservation-container" class="container">
@@ -84,7 +84,7 @@
                         <img src="./images/reservation.jpg" class="img-fluid-rounded" alt="Restaurant Interior">
                     </div>
                     <div class="col-lg-6 order-1 order-lg-1">
-                        <form role="form" aria-labelledby="reservation-heading">
+                        <form aria-labelledby="reservation-heading">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <label for="reservation-date" class="form-label">Date *</label>
@@ -116,8 +116,7 @@
                                 </div>
                                 <div class="col-12">
                                     <label for="reservation-comment" class="form-label">Comments</label>
-                                    <textarea class="form-control" id="reservation-comment" name="comment" rows="4" aria-describedby="comment-help"></textarea>
-                                    <!-- <div id="comment-help" class="form-text">Optional: Let us know about any dietary restrictions or special requests</div> -->
+                                    <textarea class="form-control" id="reservation-comment" name="comment" rows="4"></textarea>
                                 </div>
                                 <div class="col-12 text-center">
                                     <button type="submit" class="btn btn-primary px-5" aria-label="Submit reservation request">Book Now</button>
