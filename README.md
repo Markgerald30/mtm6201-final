@@ -9,19 +9,35 @@
 [Font](https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap)
 
 [images](https://www.pexels.com/)
+
 [generated_images](https://chatgpt.com/)
+
 ![Green Leaf Vegetarian Logo](logo.png)
+
 ![Salad bowl hero image](hero-image-480x270.jpg)
+
 ![Salad Bowl](salad-card.jpg)
+
 ![Avocado Toast](sandwich-card.jpg)
+
 ![Smoothies](smoothie-card.jpg)
+
 ![Quinoa & Kale Power Bowl](chef-recommended.jpg)
+
 ![Our team in the kitchen](our-story.jpg)
+
 ![Team member Maya Sinclair](head-chef.jpg)
-![Team member Javier Martinez](igeneral-manager.jpg)
+
+![Team member Javier Martinez](general-manager.jpg)
+
 ![Team member Priya Gupta](executive-chef.jpg)
+
 ![Team member Alex Thompson](coordinator.jpg)
+
 ![Menu Salad Bowl](menu-salad.jpg)
+
 ![Grilled Sandwich](menu-sandwich.jpg)
+
 ![Menu Smoothies](menu-smoothie.jpg)
+
 ![Restaurant Interior](reservation.jpg)
